@@ -49,7 +49,7 @@ public class CadastroEntregasService {
         idDelivery = String.valueOf(gson.fromJson(response.jsonPath().prettify(), EntregaModel.class).getNumeroEntrega());
     }
 
-    public void deleteDelivery(String endPoint, String point) {
+    public void deleteDelivery(String endPoint) {
         // Verificar se o idDelivery foi recuperado antes de tentar deletar
         if (idDelivery == null || idDelivery.isEmpty()) {
             throw new IllegalStateException("ID da entrega não recuperado. Certifique-se de que retrieveIdDelivery() foi chamado.");

@@ -23,3 +23,8 @@ Funcionalidade: Deletar uma entrega
     Quando eu enviar a requisição para o endpoint "/entregas" de cadastro de entregas
     Então o status code da resposta deve ser 400
     E o corpo de resposta de erro da api deve retornar a mensagem "Dados fornecidos estão em formato inválido."
+
+  Cenário: Deve ser possível deletar uma entrega
+    Dado que eu recupere o ID da entrega criada no contexto
+    Quando eu enviar a requisição com o ID para o endpoint "/entregas" de deleção de entrega
+    Então o status code da resposta deve ser 204
